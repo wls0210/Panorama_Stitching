@@ -3,6 +3,10 @@
 #include <QtWidgets/QMainWindow>
 #include <QList>
 #include <QFiledialog>
+#include <QPainter>
+
+#include <fstream>
+
 #include "ui_panorama_stitching.h"
 #include "Image.h" // for image set
 
@@ -25,6 +29,9 @@ private:
 	// Focal length and scale factor
 	int factor;
 
+	// Key point detection function
+	void keypoint_detection(QList<Image*>::iterator cur);
+
 	// Update widgets in main window
 	void update_window();
 
@@ -38,6 +45,9 @@ private slots:
 	void scrol();
 	void cylindricalProjection_v1_caller();
 	void cylindricalProjection_v2_caller();
+	void save_img();
 	void prev_img();
 	void next_img();
+	void keypoint_detection_caller();
+
 };
