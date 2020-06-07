@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1210</width>
-    <height>725</height>
+    <height>729</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -73,7 +73,7 @@
      <item>
       <widget class="QSlider" name="horizontalSlider">
        <property name="minimum">
-        <number>100</number>
+        <number>400</number>
        </property>
        <property name="maximum">
         <number>3000</number>
@@ -142,6 +142,19 @@
      <string>Prev</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_save">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -160,10 +173,12 @@
    </widget>
    <widget class="QMenu" name="menumenuCylindrical_Projection">
     <property name="title">
-     <string>Cylindrical Projection</string>
+     <string>Processing</string>
     </property>
     <addaction name="actionDisable_Y_axis"/>
     <addaction name="actionAble_Y_axis"/>
+    <addaction name="separator"/>
+    <addaction name="actionKeypoint_detection"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menumenuCylindrical_Projection"/>
@@ -210,6 +225,11 @@
   <action name="actionAble_Y_axis">
    <property name="text">
     <string>normal projection</string>
+   </property>
+  </action>
+  <action name="actionKeypoint_detection">
+   <property name="text">
+    <string>Keypoint detection</string>
    </property>
   </action>
  </widget>
